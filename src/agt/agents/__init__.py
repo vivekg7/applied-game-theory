@@ -3,13 +3,15 @@
 from collections.abc import Callable
 
 from agt.agents.human import HumanAgent
+from agt.agents.minimax import MinimaxAgent
 from agt.agents.random_agent import RandomAgent
 from agt.core import Agent
 
 # Name -> factory taking a seed, used by the CLI and experiments to pick agents by name.
 AGENTS: dict[str, Callable[[int | None], Agent]] = {
     "random": lambda seed: RandomAgent(seed),
+    "minimax": lambda seed: MinimaxAgent(),
     "human": lambda seed: HumanAgent(),
 }
 
-__all__ = ["AGENTS", "HumanAgent", "RandomAgent"]
+__all__ = ["AGENTS", "HumanAgent", "MinimaxAgent", "RandomAgent"]

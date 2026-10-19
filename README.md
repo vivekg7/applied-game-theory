@@ -46,6 +46,7 @@ from `.python-version` and installs the pinned dependencies from `uv.lock`.
 uv sync                                       # create .venv and install everything
 uv run pytest                                 # run the tests
 uv run agt play tictactoe                     # play against the random agent
+uv run agt play tictactoe --opponent minimax  # ...or against perfect play
 uv run agt play tictactoe --second            # ...letting it move first
 uv run agt match tictactoe random random -n 10000
 ```
@@ -57,7 +58,8 @@ Before committing, run `uv run ruff format && uv run ruff check --fix`.
 | Phase | Topic                                     | Theory | Code | Evidence |
 | ----- | ----------------------------------------- | :----: | :--: | :------: |
 | 0     | Game interface, tic-tac-toe, match runner |   ✅   |  ✅  |    —     |
-| 1     | Minimax, alpha-beta                       |        |      |          |
+| 1     | Minimax                                   |   ✅   |  ✅  |    —     |
+| 1     | Alpha-beta                                |        |      |          |
 
 See [ROADMAP.md](ROADMAP.md) for everything that comes after.
 

@@ -16,7 +16,7 @@ A phase isn't done when the code compiles.
 
 ## Phase 1: Adversarial search (weeks 1–2)
 
-- [ ] Minimax over the full tic-tac-toe tree, to prove perfect play is a draw
+- [x] Minimax over the full tic-tac-toe tree, to prove perfect play is a draw
 - [ ] Alpha-beta pruning
 - [ ] **Experiment 001**: minimax vs. alpha-beta. Count the nodes, check the
       decisions are identical, and measure the effect of move ordering
