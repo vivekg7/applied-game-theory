@@ -1,0 +1,32 @@
+[project]
+name = "agt"
+version = "0.1.0"
+description = "Learning game theory, adversarial search and multi-agent learning through experiments."
+authors = [{ name = "Vivek Kumar Gupta", email = "vivek@ivy.homes" }]
+requires-python = ">=3.15"
+dependencies = []
+
+[project.scripts]
+agt = "agt.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py315"
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, isort, pyupgrade, bugbear, simplify
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
