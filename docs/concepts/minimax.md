@@ -158,6 +158,6 @@ uv run agt match tictactoe minimax random -n 100
 
 ## Next
 
-Alpha-beta pruning gives exactly the same decision while skipping subtrees that
-can't affect it. Experiment 001 will measure how many of these 549,946 nodes it
-avoids, and how much that depends on move ordering.
+[Alpha-beta pruning](alpha-beta.md) gives exactly the same decision while
+skipping subtrees that can't affect it: 18,297 of these 549,946 nodes from the
+empty board. Experiment 001 measures how much that depends on move ordering.

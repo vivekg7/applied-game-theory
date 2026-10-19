@@ -59,7 +59,7 @@ Before committing, run `uv run ruff format && uv run ruff check --fix`.
 | ----- | ----------------------------------------- | :----: | :--: | :------: |
 | 0     | Game interface, tic-tac-toe, match runner |   ✅   |  ✅  |    —     |
 | 1     | Minimax                                   |   ✅   |  ✅  |    —     |
-| 1     | Alpha-beta                                |        |      |          |
+| 1     | Alpha-beta                                |   ✅   |  ✅  |    —     |
 
 See [ROADMAP.md](ROADMAP.md) for everything that comes after.
 

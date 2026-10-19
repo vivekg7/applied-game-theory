@@ -2,6 +2,7 @@
 
 from collections.abc import Callable
 
+from agt.agents.alphabeta import AlphaBetaAgent
 from agt.agents.human import HumanAgent
 from agt.agents.minimax import MinimaxAgent
 from agt.agents.random_agent import RandomAgent
@@ -11,7 +12,8 @@ from agt.core import Agent
 AGENTS: dict[str, Callable[[int | None], Agent]] = {
     "random": lambda seed: RandomAgent(seed),
     "minimax": lambda seed: MinimaxAgent(),
+    "alphabeta": lambda seed: AlphaBetaAgent(),
     "human": lambda seed: HumanAgent(),
 }
 
-__all__ = ["AGENTS", "HumanAgent", "MinimaxAgent", "RandomAgent"]
+__all__ = ["AGENTS", "AlphaBetaAgent", "HumanAgent", "MinimaxAgent", "RandomAgent"]
