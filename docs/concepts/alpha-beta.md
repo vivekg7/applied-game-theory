@@ -115,7 +115,23 @@ move, so real engines use cheap guesses: heuristics, the best move from a
 previous shallower search, or "killer moves".
 
 This implementation deliberately uses plain `legal_actions()` order (cells
-0–8). Measuring how much better ordering helps is **Experiment 001**.
+0–8). [Experiment 001](../../experiments/001-minimax-vs-alpha-beta/) measured
+how much ordering matters. From the empty board:
+
+| Ordering                                            |  Nodes |
+| --------------------------------------------------- | -----: |
+| natural (cells 0–8)                                 | 18,297 |
+| random, mean over 200 seeds                         | 14,661 |
+| centre, then corners, then edges                    |  7,275 |
+| win now, then block, then centre/corners/edges      |  2,096 |
+| sorted by true value, ties broken by the line above |  1,774 |
+
+Two results are worth knowing. Natural order is a _bad_ order: 197 of 200
+random orders beat it. And sorting moves by their true value, with ties broken
+in natural order, is not the best possible ordering: it gets 2,312. When
+several moves are equally good, what matters is which one is cheapest to
+search. A move that wins on the spot costs one node, a move that wins in five
+costs a subtree, and both are worth 1.
 
 ## How it maps onto the code
 
@@ -153,16 +169,17 @@ including the tie-break that takes the first best move.
 
 ## Try it
 
-Predict, then check in Experiment 001:
+Predict, then check against
+[Experiment 001](../../experiments/001-minimax-vs-alpha-beta/):
 
-- Which cell would you try **first** at the root to maximize pruning? And at
-  every node below it?
 - If moves were tried in the _reverse_ order (8 down to 0), would the count go
-  up or down?
+  up or down? Hint: think about what reversing the cell numbers does to the
+  board.
 - Could a "perfect" ordering get the root search down to near
   `√549,946 ≈ 742` nodes, as `b^(d/2)` suggests? Why might tic-tac-toe not
   follow the formula closely? Hint: games end early, and the branching factor
   shrinks as the board fills.
+- With moves tried _worst_ first, would alpha-beta prune anything at all?
 
 ```sh
 uv run agt match tictactoe alphabeta minimax -n 2   # always a draw

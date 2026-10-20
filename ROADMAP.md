@@ -18,7 +18,7 @@ A phase isn't done when the code compiles.
 
 - [x] Minimax over the full tic-tac-toe tree, to prove perfect play is a draw
 - [x] Alpha-beta pruning
-- [ ] **Experiment 001**: minimax vs. alpha-beta. Count the nodes, check the
+- [x] **Experiment 001**: minimax vs. alpha-beta. Count the nodes, check the
       decisions are identical, and measure the effect of move ordering
 - [ ] Connect Four: too big to search fully, so it forces a depth limit
 - [ ] Depth-limited search with an evaluation function

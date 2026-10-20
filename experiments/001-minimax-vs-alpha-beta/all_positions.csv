@@ -1,0 +1,29 @@
+search,ordering,seed,total_nodes,same_move_as_minimax,optimal_moves
+minimax,natural,,2125535,4520,4520
+alphabeta,natural,,274507,4520,4520
+alphabeta,reverse,,274507,2406,4520
+alphabeta,centre-corners-edges,,197222,3518,4520
+alphabeta,tactical,,102985,3372,4520
+alphabeta,oracle best-first,,112630,4520,4520
+alphabeta,"oracle, tactical ties",,95769,3372,4520
+alphabeta,oracle worst-first,,1061309,4520,4520
+alphabeta,random,0,251467,3161,4520
+alphabeta,random,1,254263,3232,4520
+alphabeta,random,2,249457,3202,4520
+alphabeta,random,3,249100,3163,4520
+alphabeta,random,4,244839,3168,4520
+alphabeta,random,5,251148,3197,4520
+alphabeta,random,6,252438,3209,4520
+alphabeta,random,7,254980,3202,4520
+alphabeta,random,8,244189,3155,4520
+alphabeta,random,9,248953,3181,4520
+alphabeta,random,10,250740,3183,4520
+alphabeta,random,11,251983,3195,4520
+alphabeta,random,12,247516,3186,4520
+alphabeta,random,13,247706,3162,4520
+alphabeta,random,14,253208,3172,4520
+alphabeta,random,15,248643,3216,4520
+alphabeta,random,16,249399,3205,4520
+alphabeta,random,17,254184,3166,4520
+alphabeta,random,18,253905,3181,4520
+alphabeta,random,19,249668,3199,4520

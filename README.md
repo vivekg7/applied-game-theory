@@ -55,11 +55,13 @@ Before committing, run `uv run ruff format && uv run ruff check --fix`.
 
 ## Status
 
-| Phase | Topic                                     | Theory | Code | Evidence |
-| ----- | ----------------------------------------- | :----: | :--: | :------: |
-| 0     | Game interface, tic-tac-toe, match runner |   ✅   |  ✅  |    —     |
-| 1     | Minimax                                   |   ✅   |  ✅  |    —     |
-| 1     | Alpha-beta                                |   ✅   |  ✅  |    —     |
+| Phase | Topic                                     | Theory | Code | Evidence  |
+| ----- | ----------------------------------------- | :----: | :--: | :-------: |
+| 0     | Game interface, tic-tac-toe, match runner |   ✅   |  ✅  |     —     |
+| 1     | Minimax                                   |   ✅   |  ✅  | [001][e1] |
+| 1     | Alpha-beta                                |   ✅   |  ✅  | [001][e1] |
+
+[e1]: experiments/001-minimax-vs-alpha-beta/
 
 See [ROADMAP.md](ROADMAP.md) for everything that comes after.
 
